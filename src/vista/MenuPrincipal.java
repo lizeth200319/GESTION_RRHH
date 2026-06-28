@@ -44,4 +44,8 @@ public class MenuPrincipal extends JFrame {
 			JOptionPane.showMessageDialog(null, "¡Bienvenidos!");
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 787702a6be5e1c784edfcb43f2bf008e7c9146e3

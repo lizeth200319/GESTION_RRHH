@@ -1,7 +1,7 @@
 package modelo;
 
 public class Asistencia {
-	// Atributos privados
+
 	private int idAsistencia;
     private String horaEntrada;
     private String horaSalida;
@@ -17,5 +17,4 @@ public class Asistencia {
         this.tardanza = tardanza;
         this.inasistencia = inasistencia;
     }
-
 }
