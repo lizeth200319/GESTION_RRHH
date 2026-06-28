@@ -1,6 +1,7 @@
 package modelo;
 
 public class Contrato {
+	
 	// Atributos privados
     private int idContrato;
     private String tipoContrato;
