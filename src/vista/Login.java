@@ -29,6 +29,7 @@ public class Login extends JFrame {
 	 * Launch the application.
 	 */
 	ConexionSQL con = new ConexionSQL();
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -83,6 +84,11 @@ public class Login extends JFrame {
 		txtContrasenia.setEchoChar('*');
 		txtContrasenia.setBounds(45, 187, 154, 20);
 		contentPane.add(txtContrasenia);
+		
+		JButton btnSalir = new JButton("SALIR");
+		btnSalir.setFont(new Font("Tahoma", Font.BOLD, 12));
+		btnSalir.setBounds(57, 269, 106, 23);
+		contentPane.add(btnSalir);
 		//metodos del login
 		btnImgresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -101,8 +107,3 @@ public class Login extends JFrame {
 			}
 		});
 	}
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 787702a6be5e1c784edfcb43f2bf008e7c9146e3
