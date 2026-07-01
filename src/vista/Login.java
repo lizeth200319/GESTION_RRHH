@@ -17,6 +17,7 @@ import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class Login extends JFrame {
 
@@ -67,6 +68,10 @@ public class Login extends JFrame {
 		txtUsuario.setColumns(10);
 		
 		JButton btnImgresar = new JButton("INGRESAR");
+		btnImgresar.setForeground(new Color(255, 255, 240));
+		btnImgresar.setContentAreaFilled(false);
+		btnImgresar.setOpaque(true);
+		btnImgresar.setBackground(new Color(0, 0, 128));
 		
 		btnImgresar.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnImgresar.setBounds(57, 235, 106, 23);
@@ -86,9 +91,14 @@ public class Login extends JFrame {
 		contentPane.add(txtContrasenia);
 		
 		JButton btnSalir = new JButton("SALIR");
+		btnSalir.setForeground(new Color(255, 255, 255));
 		btnSalir.setFont(new Font("Tahoma", Font.BOLD, 12));
 		btnSalir.setBounds(57, 269, 106, 23);
+		btnSalir.setBackground(new Color(0, 0, 128));
+		btnSalir.setContentAreaFilled(false);
+		btnSalir.setOpaque(true);
 		contentPane.add(btnSalir);
+
 		//metodos del login
 		btnImgresar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -107,3 +117,4 @@ public class Login extends JFrame {
 			}
 		});
 	}
+}
