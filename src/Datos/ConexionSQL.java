@@ -12,22 +12,27 @@ public class ConexionSQL {
     private static final String CLAVE = "system";
 
 
-	    public static Connection getConexion() {
-	        Connection conexion = null;
-	        try {
-	          
-	            conexion = DriverManager.getConnection(URL, USUARIO, CLAVE);
-	            System.out.println("¡Conexión exitosa a la base de datos!");
-	            
-	  	        } catch (SQLException e) {
-	            System.out.println("Error al conectar a la base de datos: " + e.getMessage());
-	            e.printStackTrace();
-	        }
-	        return conexion;
-	    }
+    public Connection getConexion() {
+        Connection conexion = null;
+        try {
+            
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+            conexion = DriverManager.getConnection(URL, USUARIO, CLAVE);
+          
+            
+        } catch (ClassNotFoundException e) {
+            System.err.println("Error: ¡No se encontró el driver de SQL Server! " + e.getMessage());
+        } catch (SQLException e) {
+            System.err.println("Error al conectar a la base de datos: " + e.getMessage());
+            e.printStackTrace();
+        }
+        
+        return conexion;
+    }
 
 	    
-	    public static void desconectar(Connection conexion) {
+	    public  void desconectar(Connection conexion) {
 	        if (conexion != null) {
 	            try {
 	                conexion.close();

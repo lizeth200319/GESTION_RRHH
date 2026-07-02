@@ -11,6 +11,7 @@ public class Usuario {
     public Usuario() {
     }
 
+    
     // 3. Constructor con parámetros
     public Usuario(String dniTrabajador, String usuario, String contrasena, String rol) {
         this.dniTrabajador = dniTrabajador;
